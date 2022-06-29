@@ -18,10 +18,8 @@ mt.__namecall = newcclosure(function(self, ...)
     return namecall(self, table.unpack(args))
 end)
 
-game.Players.LocalPlayer.Name = "FxWkGhJsBc"
+game.Players.LocalPlayer.Name = "Kiokune"
 
-game.Players.LocalPlayer.UserId = 3354893474
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/RealLuzu/Swag_Protection/main/shitmode'))();
+game.Players.LocalPlayer.UserId = 3468728207
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
